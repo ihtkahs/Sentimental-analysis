@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Static/index.css">
+    <title>Mental Health Analysis</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Analysis</h1>
+
+        <!-- Survey Section -->
+        <div class="section">
+            <h2>Assessment through Survey</h2>
+            <!-- Add your survey questions here -->
+            <form action="/survey" method="post">
+                <!-- Survey form elements go here -->
+                <input type="submit" value="Submit Survey">
+            </form>
+        </div>
+
+        <!-- Text Section -->
+        <div class="section">
+            <h2>Assessment through Text</h2>
+            <form action="/text" method="post">
+                <textarea name="text_input" placeholder="Type your thoughts here"></textarea>
+                <input type="submit" value="Submit Text">
+            </form>
+        </div>
+
+        <!-- Audio Section -->
+        <div class="section">
+            <h2>Assessment through Audio</h2>
+            <form action="/audio" method="post" enctype="multipart/form-data">
+                <input type="file" name="audio_file" accept="audio/*" capture>
+                <input type="submit" value="Submit Audio">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
